@@ -9,7 +9,7 @@ class FibonacciServiceTest {
 
     private val underTest = FibonacciService()
     @Test
-    fun shouldReturn0WhenCall1() {
+    fun shouldReturn1WhenCall1() {
         // given
 
         // when
@@ -18,5 +18,25 @@ class FibonacciServiceTest {
         Assertions.assertEquals(1, result)
     }
 
-    // TODO - Test with greater numbers and test edge cases
+    @Test
+    fun shouldReturn5WhenCall5() {
+        // given
+
+        // when
+        val result: Int = underTest.fibonacci(5)
+        // then
+        Assertions.assertEquals(5, result)
+    }
+
+    @Test
+    fun shouldReturn8WhenCall6() {
+        // given
+
+        // when
+        val result: Int = underTest.fibonacci(6)
+        // then
+        Assertions.assertEquals(8, result)
+    }
+
+
 }
